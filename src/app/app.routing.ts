@@ -1,5 +1,6 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {ImageUploadPopupComponent} from './complib-module/components/image-upload/image-upload-popup.component';
 
 export const appRouting: Routes = [
   {
@@ -14,6 +15,11 @@ export const appRouting: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: 'image-upload',
+    component: ImageUploadPopupComponent,
+    outlet: 'popup'
   },
 ];
 
